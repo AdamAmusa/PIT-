@@ -11,17 +11,25 @@ public class NewBehaviourScript : MonoBehaviour
 
     public UnityEvent OnBegin, OnDone;
 
+    // Start is called before the first frame update
     public void PlayFeedback(GameObject sender){
+        //stop all coroutines
         StopAllCoroutines();
+        //invoke the onBegin event
         OnBegin?.Invoke();
+        //get the direction from the sender to this object
         Vector2 direction = (transform.position - sender.transform.position).normalized;  
+        //add force to the rigidbody
         rb.AddForce(direction * strength, ForceMode2D.Impulse);
         StartCoroutine(Reset());  
     }
 
     private IEnumerator Reset(){
+        //wait for the delay
         yield return new WaitForSeconds(delay);
+        //reset the velocity of the rigidbody
         rb.velocity = Vector3.zero;
+        //invoke the onDone event
         OnDone?.Invoke();
     }
 }

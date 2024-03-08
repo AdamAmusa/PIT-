@@ -21,15 +21,11 @@ public class PlayerCombat : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {     
         if(Input.GetKey("f"))
         {
-            
-            Attack();
-            
+            Attack();    
         }
-
     }
 
     void Attack(){
@@ -37,7 +33,7 @@ public class PlayerCombat : MonoBehaviour
 
     }
 
-
+    //function to be called when the animation is finished
     void animationFinished(GameObject sender){
         Debug.Log("Animation Finished");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(jabPoint.position, attackRange, enemyLayers);
@@ -51,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
 
         animator.ResetTrigger("Attack");
     }
-
+    //draws a wire sphere around the jabPoint
     void OnDrawGizmosSelected(){
         //if the jabPoint is not set, return
         if(jabPoint == null){

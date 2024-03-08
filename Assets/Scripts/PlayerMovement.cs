@@ -6,15 +6,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     public Animator animator;
 
-
-
     [SerializeField] private float jumpForce;
     
-
     bool grounded;
    
-    
-    
     private Rigidbody2D rb;
     private float hMove;
 
@@ -41,11 +36,12 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-
+    //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate(){
         rb.velocity = new Vector2(hMove * speed, rb.velocity.y);
     }
 
+    //When two colliders come into contact
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -54,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //When two colliders come into contact
      private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
