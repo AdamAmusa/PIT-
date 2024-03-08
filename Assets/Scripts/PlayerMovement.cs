@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("Grounded");
             grounded = true;
         }
     }
