@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -36,14 +37,16 @@ public class PlayerCombat : MonoBehaviour
 
     }
 
-    
-    void animationFinished(){
+
+    void animationFinished(GameObject sender){
         Debug.Log("Animation Finished");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(jabPoint.position, attackRange, enemyLayers);
 
         //loops through all the enemies that were hit
         foreach(Collider2D enemy in hitEnemies){
             Debug.Log("We hit " + enemy.name);
+            Health health = enemy.GetComponent<Health>();   
+            health.onHit(this.gameObject);
         }
 
         animator.ResetTrigger("Attack");
