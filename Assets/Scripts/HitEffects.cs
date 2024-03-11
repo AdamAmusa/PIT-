@@ -7,7 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float strength = 16, delay = 0.15f;
+    [SerializeField] private float strength = 5, delay = 0.15f;
 
     public UnityEvent OnBegin, OnDone;
 
