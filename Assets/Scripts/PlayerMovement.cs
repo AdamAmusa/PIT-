@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         {
             
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            
         }
 
 
@@ -39,6 +38,13 @@ public class PlayerMovement : MonoBehaviour
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate(){
         rb.velocity = new Vector2(hMove * speed, rb.velocity.y);
+
+        if(hMove < 0){
+           gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+         if(hMove > 0){
+           gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     //When two colliders come into contact
