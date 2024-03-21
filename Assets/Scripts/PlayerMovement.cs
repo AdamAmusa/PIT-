@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate(){
         rb.velocity = new Vector2(hMove * speed, rb.velocity.y);
 
+        //Flip the character
         if(hMove < 0){
            gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
