@@ -1,0 +1,822 @@
+fileFormatVersion: 2
+guid: d8d80862b6cc6354d872f2df88a9c77b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1919
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025cd9bd3f0b58145829b745336e0342
+      internalID: 1169511353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_1
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1918
+        width: 51
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1af2869b3147f46aba958c026fb1ee
+      internalID: -1325764452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_2
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1918
+        width: 51
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cf2578af9ca29499bf6c783c59bdef
+      internalID: -1697226717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_3
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1918
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab1b64aa0b5bc0458cef8a5906504c8
+      internalID: -1891881736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_4
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1918
+        width: 49
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fa154102960ef4da20f1d146ba46c2
+      internalID: -1900037055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_5
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1918
+        width: 49
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce84370f168c20048839c048cdc3e236
+      internalID: 1952060513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_6
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 1918
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244ccda78358f064ebc1d62f7416826d
+      internalID: -1792342477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_7
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 1918
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8239e37750f29f948ac76dc3f66ec451
+      internalID: -168625054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_8
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1662
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0054d9c223cdd124590a88101225d33a
+      internalID: -2024223694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1662
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfd78529126c6445bc161fa247f4ade
+      internalID: 299353108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_10
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1662
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f8473485cd07041a8671d869834dc7
+      internalID: 1883940645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_11
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1662
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8beb314b326824e80ff832276d8388
+      internalID: -1981881466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_12
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1662
+        width: 56
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87987cc416d3f2c43bbb712a9e66c000
+      internalID: 1347079927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_13
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1662
+        width: 56
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c476e7c29cd794fa14d48ed1e8acba
+      internalID: 687403945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_14
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 1662
+        width: 56
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626a11ea0d87ac34c9c0706bfd864075
+      internalID: -305101651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1663
+        width: 47
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f53a9bb77051647bda40eef8426cb4
+      internalID: -845918172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_16
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1407
+        width: 48
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fbc9d2b2bc9974da3c3b7c201c20af
+      internalID: 907127591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_17
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1407
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155767d6cdf7d7940a1b0b33e880d728
+      internalID: -1210920569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_18
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1407
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ef22f1a34291e4984d391985c371d8
+      internalID: -34605184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_19
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1407
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261b03223b6be4249afe1293e43ca102
+      internalID: 837920418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_20
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1407
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b064054fe906745926421a6378cb30
+      internalID: -1373712518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_21
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 1407
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0581a29b4d7034f803f182b4a4d3e8
+      internalID: 2095623101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_22
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 1407
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381c2869e2ed8644c87ef23c16bf6374
+      internalID: 1665367236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_23
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1407
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa2f281b3cf334488f78e936e95374d
+      internalID: -1880176027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_24
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1151
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f3cd1e69e0d9844b2ea581bc4bc3e7
+      internalID: -1554999238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_25
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1151
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5231c9c8f8da9464ebea11097273dead
+      internalID: -3223633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_26
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1151
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd050ee0d48c76419cb06fec681f132
+      internalID: -847400913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_27
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1151
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826b7ea431abdfb4d856537984b960b0
+      internalID: 800272994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_28
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1151
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0224c791012c65a4a887ba7063e0a9e5
+      internalID: 1479694340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_29
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 1151
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f961af3e863412240a82f946cb9286a2
+      internalID: -360167633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kickboxer(Heavy side)_30
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 1151
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd23a7c89cbcb345b7756557ff3accc
+      internalID: 1601224072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Kickboxer(Heavy side)_0: 1169511353
+      Kickboxer(Heavy side)_1: -1325764452
+      Kickboxer(Heavy side)_10: 1883940645
+      Kickboxer(Heavy side)_11: -1981881466
+      Kickboxer(Heavy side)_12: 1347079927
+      Kickboxer(Heavy side)_13: 687403945
+      Kickboxer(Heavy side)_14: -305101651
+      Kickboxer(Heavy side)_15: -845918172
+      Kickboxer(Heavy side)_16: 907127591
+      Kickboxer(Heavy side)_17: -1210920569
+      Kickboxer(Heavy side)_18: -34605184
+      Kickboxer(Heavy side)_19: 837920418
+      Kickboxer(Heavy side)_2: -1697226717
+      Kickboxer(Heavy side)_20: -1373712518
+      Kickboxer(Heavy side)_21: 2095623101
+      Kickboxer(Heavy side)_22: 1665367236
+      Kickboxer(Heavy side)_23: -1880176027
+      Kickboxer(Heavy side)_24: -1554999238
+      Kickboxer(Heavy side)_25: -3223633
+      Kickboxer(Heavy side)_26: -847400913
+      Kickboxer(Heavy side)_27: 800272994
+      Kickboxer(Heavy side)_28: 1479694340
+      Kickboxer(Heavy side)_29: -360167633
+      Kickboxer(Heavy side)_3: -1891881736
+      Kickboxer(Heavy side)_30: 1601224072
+      Kickboxer(Heavy side)_4: -1900037055
+      Kickboxer(Heavy side)_5: 1952060513
+      Kickboxer(Heavy side)_6: -1792342477
+      Kickboxer(Heavy side)_7: -168625054
+      Kickboxer(Heavy side)_8: -2024223694
+      Kickboxer(Heavy side)_9: 299353108
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
