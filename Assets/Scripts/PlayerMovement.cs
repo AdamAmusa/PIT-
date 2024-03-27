@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -29,8 +30,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("space") && grounded)
         {
+           // animator.SetTrigger("Jump");
             
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            
         }
 
 
@@ -52,9 +55,16 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
-        {
+        { 
             grounded = true;
+            animator.SetBool("isJumping", false);
+            Debug.Log("Grounded");
+            
         }
+    }
+
+    void onLand(GameObject sender){
+        animator.ResetTrigger("Jump");
     }
 
     //When two colliders come into contact
@@ -62,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            animator.SetBool("isJumping", true);
             grounded = false;
         }
     }
