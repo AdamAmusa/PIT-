@@ -3,16 +3,35 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlayerCombat : MonoBehaviour
 {
-
+    
     public Transform jabPoint;
     public float attackRange = 0.5f;    
     public LayerMask enemyLayers;
 
+    public InputActionAsset playerControls;
+    private InputAction combatAction;
+
+
     public Animator animator;
     
+    void Awake(){
+        combatAction = playerControls.FindAction("Up-Light");
+    }
+
+     void OnEnable()
+    {
+        combatAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        combatAction.Disable();
+    }   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +45,21 @@ public class PlayerCombat : MonoBehaviour
         {
             Attack();    
         }
+
+      if(combatAction.triggered)
+        {
+            Debug.Log("Up Light");
+        }
+        
     }
 
     void Attack(){
         animator.SetTrigger("Attack"); 
 
     }
+
+
+
 
     //function to be called when the animation is finished
     void animationFinished(GameObject sender){
