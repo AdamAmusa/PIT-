@@ -163,9 +163,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Button With Two Modifiers",
+                    "name": "Button With One Modifier",
                     "id": "5b893209-a88a-467f-89fa-1e9fb86535a6",
-                    "path": "ButtonWithTwoModifiers",
+                    "path": "ButtonWithOneModifier",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -174,7 +174,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Modifier 1",
+                    "name": "Modifier",
                     "id": "60ae5954-2694-4763-884f-7cb757f795d5",
                     "path": "<Keyboard>/s",
                     "interactions": "",
@@ -185,7 +185,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Modifier 2",
+                    "name": "Button",
                     "id": "20939ee2-305b-4e44-bb8e-af3e3d94702d",
                     "path": "<Keyboard>/m",
                     "interactions": "",

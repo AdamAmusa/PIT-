@@ -13,23 +13,24 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
 
     public InputActionAsset playerControls;
-    private InputAction combatAction;
+    private CombatControls combatControls;
 
 
     public Animator animator;
     
     void Awake(){
-        combatAction = playerControls.FindAction("Up-Light");
+        combatControls = GetComponent<CombatControls>();
+        combatControls.awakeControls();
     }
 
      void OnEnable()
     {
-        combatAction.Enable();
+        combatControls.enableControls();
     }
 
     void OnDisable()
     {
-        combatAction.Disable();
+        combatControls.disableControls();
     }   
 
     // Start is called before the first frame update
@@ -46,10 +47,31 @@ public class PlayerCombat : MonoBehaviour
             Attack();    
         }
 
-      if(combatAction.triggered)
+      if(combatControls.upLight.triggered)
         {
             Debug.Log("Up Light");
         }
+
+        if(combatControls.Heavy.triggered)
+        {
+            Debug.Log("Heavy");
+        }   
+        
+        if(combatControls.UpHeavy.triggered)
+        {
+            Debug.Log("Up Heavy");
+        }
+
+        if(combatControls.DownHeavy.triggered)
+        {
+            Debug.Log("Down Heavy");
+        }
+
+        if(combatControls.DownLight.triggered)
+        {
+            Debug.Log("Down Light");
+        }
+
         
     }
 
