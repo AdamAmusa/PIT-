@@ -8,11 +8,17 @@ using UnityEngine.InputSystem;
 public class PlayerCombat : MonoBehaviour
 {
     
-    public Transform jabPoint;
-    public Transform heavyPoint;
-
+    public Transform jabPoint, heavyPoint, upHeavyPoint, downHeavyPoint, downLightPoint;
     
     public float attackRange = 0.5f;    
+
+    public float heavyUpAttackRange = 0.21f;
+
+    public float heavyDownAttackRange = 0.21f;
+
+    public float downLightAttackRange = 0.21f;
+
+
     public LayerMask enemyLayers;
 
     public InputActionAsset playerControls;
@@ -103,13 +109,45 @@ public class PlayerCombat : MonoBehaviour
         animator.ResetTrigger("HeavyAttack");
     }
 
-    void HeavyUpFinish(GameObject sender){}
+    void HeavyUpFinish(GameObject sender){
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(upHeavyPoint.position, heavyUpAttackRange, enemyLayers);
 
-    void HeavyDownFinish(GameObject sender){}
+        foreach(Collider2D enemy in hitEnemies){
+            Debug.Log("We hit " + enemy.name);
+            Health health = enemy.GetComponent<Health>();   
+            health.onHit(this.gameObject);
+        }
+    }
 
-    void LightUpFinish(GameObject sender){}
+    void HeavyDownFinish(GameObject sender){
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(downHeavyPoint.position, heavyDownAttackRange, enemyLayers);
 
-    void LightDownFinish(GameObject sender){}
+        foreach(Collider2D enemy in hitEnemies){
+            Debug.Log("We hit " + enemy.name);
+            Health health = enemy.GetComponent<Health>();   
+            health.onHit(this.gameObject);
+        }
+    }
+
+    void LightUpFinish(GameObject sender){
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyPoint.position, attackRange, enemyLayers);
+
+        foreach(Collider2D enemy in hitEnemies){
+            Debug.Log("We hit " + enemy.name);
+            Health health = enemy.GetComponent<Health>();   
+            health.onHit(this.gameObject);
+        }
+    }
+
+    void LightDownFinish(GameObject sender){
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(downLightPoint.position, downLightAttackRange, enemyLayers);
+
+        foreach(Collider2D enemy in hitEnemies){
+            Debug.Log("We hit " + enemy.name);
+            Health health = enemy.GetComponent<Health>();   
+            health.onHit(this.gameObject);
+        }
+    }
      
 
 
@@ -120,6 +158,18 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(jabPoint.position, attackRange);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(heavyPoint.position, attackRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(upHeavyPoint.position, heavyUpAttackRange);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(downHeavyPoint.position, heavyDownAttackRange);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(downLightPoint.position, downLightAttackRange);
     }
 
 
