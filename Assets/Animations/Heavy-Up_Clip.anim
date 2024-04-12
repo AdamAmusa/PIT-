@@ -34,7 +34,7 @@ AnimationClip:
       value: {fileID: -8892363479989055053, guid: 26a356950a218714fbd121429109bd84, type: 3}
     - time: 0.6
       value: {fileID: 2341893238615298611, guid: 26a356950a218714fbd121429109bd84, type: 3}
-    - time: 0.70000005
+    - time: 0.7
       value: {fileID: 2341893238615298611, guid: 26a356950a218714fbd121429109bd84, type: 3}
     attribute: m_Sprite
     path: 
@@ -47,14 +47,31 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 5164617345712392871, guid: 26a356950a218714fbd121429109bd84, type: 3}
+    - {fileID: 2564475285595956615, guid: 26a356950a218714fbd121429109bd84, type: 3}
+    - {fileID: -5113970238310661361, guid: 26a356950a218714fbd121429109bd84, type: 3}
+    - {fileID: -6753096633136333179, guid: 26a356950a218714fbd121429109bd84, type: 3}
+    - {fileID: -3508354221765031044, guid: 26a356950a218714fbd121429109bd84, type: 3}
+    - {fileID: -8892363479989055053, guid: 26a356950a218714fbd121429109bd84, type: 3}
+    - {fileID: 2341893238615298611, guid: 26a356950a218714fbd121429109bd84, type: 3}
+    - {fileID: 2341893238615298611, guid: 26a356950a218714fbd121429109bd84, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.71000004
+    m_StopTime: 0.71
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -73,4 +90,60 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.7
+    functionName: HeavyUpFinish
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

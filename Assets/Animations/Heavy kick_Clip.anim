@@ -53,8 +53,28 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 7834658683528407537, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: -6118015487184049791, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: -8624210414942631827, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: -1891202288604774114, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: 7249616188680206163, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: -6419783226395301255, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: 3686321786181217748, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: 3207618714986600213, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: 6701452217397129884, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: 6190671088422466328, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
+    - {fileID: 6190671088422466328, guid: e2dff5d7aa47f0d4ab43346ed527d614, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -79,4 +99,25 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1
+    functionName: HeavyFinish
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

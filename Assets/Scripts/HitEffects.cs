@@ -7,7 +7,9 @@ public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float strength = 5, delay = 0.15f;
+    [SerializeField] private float lightStrength = 5;
+    [SerializeField] private float heavyStrength = 5;
+    [SerializeField] private float delay = 0.15f;
 
     public UnityEvent OnBegin, OnDone;
 
@@ -19,10 +21,14 @@ public class NewBehaviourScript : MonoBehaviour
         OnBegin?.Invoke();
         //get the direction from the sender to this object
         Vector2 direction = (transform.position - sender.transform.position).normalized;  
+        direction.y = 0;
+
         //add force to the rigidbody
-        rb.AddForce(direction * strength, ForceMode2D.Impulse);
+        rb.AddForce(direction * lightStrength, ForceMode2D.Impulse);
         StartCoroutine(Reset());  
     }
+
+
 
     private IEnumerator Reset(){
         //wait for the delay
