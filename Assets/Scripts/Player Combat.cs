@@ -9,6 +9,9 @@ public class PlayerCombat : MonoBehaviour
 {
     
     public Transform jabPoint;
+    public Transform heavyPoint;
+
+    
     public float attackRange = 0.5f;    
     public LayerMask enemyLayers;
 
@@ -44,45 +47,41 @@ public class PlayerCombat : MonoBehaviour
     {     
         if(Input.GetKey("f"))
         {
-            Attack();    
+            animator.SetTrigger("LightAttack");    
         }
 
-      if(combatControls.upLight.triggered)
+        if(combatControls.upLight.triggered)
         {
-            Debug.Log("Up Light");
+            animator.SetTrigger("Light-Up");
+            Debug.Log("Light-Up");
         }
 
-        if(combatControls.Heavy.triggered)
+        if(Input.GetKey("n"))
         {
+            animator.SetTrigger("HeavyAttack");
             Debug.Log("Heavy");
         }   
         
-        if(combatControls.UpHeavy.triggered)
+        if(Input.GetKey("n") && Input.GetKey("w"))
         {
+            animator.SetTrigger("Heavy-Up");
             Debug.Log("Up Heavy");
         }
 
-        if(combatControls.DownHeavy.triggered)
+        if(Input.GetKey("n") && Input.GetKey("s"))
         {
+            animator.SetTrigger("Heavy-Down");
             Debug.Log("Down Heavy");
         }
 
         if(combatControls.DownLight.triggered)
         {
+            animator.SetTrigger("Light-Down");
             Debug.Log("Down Light");
         }
 
-        
-    }
-
-    void Attack(){
-        animator.SetTrigger("Attack"); 
 
     }
-
-
-
-
     //function to be called when the animation is finished
     void animationFinished(GameObject sender){
         Debug.Log("Animation Finished");
@@ -95,8 +94,25 @@ public class PlayerCombat : MonoBehaviour
             health.onHit(this.gameObject);
         }
 
-        animator.ResetTrigger("Attack");
+        animator.ResetTrigger("LightAttack");
     }
+
+
+    void HeavyFinish(GameObject sender){
+
+        animator.ResetTrigger("HeavyAttack");
+    }
+
+    void HeavyUpFinish(GameObject sender){}
+
+    void HeavyDownFinish(GameObject sender){}
+
+    void LightUpFinish(GameObject sender){}
+
+    void LightDownFinish(GameObject sender){}
+     
+
+
     //draws a wire sphere around the jabPoint
     void OnDrawGizmosSelected(){
         //if the jabPoint is not set, return

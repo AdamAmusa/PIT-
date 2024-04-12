@@ -110,7 +110,7 @@
                 {
                     "name": "Modifier",
                     "id": "c3d9c917-957e-41fb-ba97-7fe9d3e56b91",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/#(N)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -121,7 +121,7 @@
                 {
                     "name": "Button",
                     "id": "959bf4ea-b958-4cbe-85d1-06eaea9ab851",
-                    "path": "<Keyboard>/n",
+                    "path": "<Keyboard>/#(W)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
