@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,23 +15,47 @@ public class NewBehaviourScript : MonoBehaviour
     public UnityEvent OnBegin, OnDone;
 
     // Start is called before the first frame update
-    public void PlayFeedback(GameObject sender){
+    public void PlayFeedback(GameObject sender, String move)
+    {
+        if (move.Contains("Up"))
+        {
+            knockbackUp(sender);
+        }
+        else
+        {//stop all coroutines
+            StopAllCoroutines();
+            //invoke the onBegin event
+            OnBegin?.Invoke();
+            //get the direction from the sender to this object
+            Vector2 direction = (transform.position - sender.transform.position).normalized;
+            direction.y = 0;
+
+            //add force to the rigidbody
+            rb.AddForce(direction * lightStrength, ForceMode2D.Impulse);
+            StartCoroutine(Reset());
+        }
+
+    }
+
+    void knockbackUp(GameObject sender)
+    {
         //stop all coroutines
         StopAllCoroutines();
         //invoke the onBegin event
         OnBegin?.Invoke();
         //get the direction from the sender to this object
-        Vector2 direction = (transform.position - sender.transform.position).normalized;  
-        direction.y = 0;
+        Vector2 direction = (transform.position - sender.transform.position).normalized;
+        
 
         //add force to the rigidbody
         rb.AddForce(direction * lightStrength, ForceMode2D.Impulse);
-        StartCoroutine(Reset());  
+        StartCoroutine(Reset());
     }
 
 
 
-    private IEnumerator Reset(){
+    private IEnumerator Reset()
+    {
         //wait for the delay
         yield return new WaitForSeconds(delay);
         //reset the velocity of the rigidbody

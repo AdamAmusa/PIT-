@@ -97,7 +97,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies){
             Debug.Log("We hit " + enemy.name);
             Health health = enemy.GetComponent<Health>();   
-            health.onHit(this.gameObject);
+            health.onHit(this.gameObject, "LightAttack");
         }
 
         animator.ResetTrigger("LightAttack");
@@ -106,6 +106,13 @@ public class PlayerCombat : MonoBehaviour
 
     void HeavyFinish(GameObject sender){
 
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyPoint.position, attackRange, enemyLayers);
+
+        foreach(Collider2D enemy in hitEnemies){
+            Debug.Log("We hit " + enemy.name);
+            Health health = enemy.GetComponent<Health>();   
+            health.onHit(this.gameObject, "HeavyAttack");
+        }
         animator.ResetTrigger("HeavyAttack");
     }
 
@@ -115,9 +122,11 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies){
             Debug.Log("We hit " + enemy.name);
             Health health = enemy.GetComponent<Health>();   
-            health.onHit(this.gameObject);
+            health.onHit(this.gameObject, "Heavy-Up");
         }
     }
+
+
 
     void HeavyDownFinish(GameObject sender){
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(downHeavyPoint.position, heavyDownAttackRange, enemyLayers);
@@ -125,7 +134,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies){
             Debug.Log("We hit " + enemy.name);
             Health health = enemy.GetComponent<Health>();   
-            health.onHit(this.gameObject);
+            health.onHit(this.gameObject, "Heavy-Down");
         }
     }
 
@@ -135,7 +144,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies){
             Debug.Log("We hit " + enemy.name);
             Health health = enemy.GetComponent<Health>();   
-            health.onHit(this.gameObject);
+            health.onHit(this.gameObject, "Light-Up");
         }
     }
 
@@ -145,7 +154,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies){
             Debug.Log("We hit " + enemy.name);
             Health health = enemy.GetComponent<Health>();   
-            health.onHit(this.gameObject);
+            health.onHit(this.gameObject, "Light-Down");
         }
     }
      
