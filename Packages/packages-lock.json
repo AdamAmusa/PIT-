@@ -229,7 +229,7 @@
       "url": "https://packages.unity.com"
     },
     "io.realm.unity": {
-      "version": "11.7.0",
+      "version": "10.15.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
