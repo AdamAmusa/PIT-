@@ -12,34 +12,40 @@ public class Enemy : MonoBehaviour
     public float speed;
 
     private float hMove;
-
+    private Vector2 lastPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        lastPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        hMove = Input.GetAxisRaw("Horizontal");
+
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
-        animator.SetFloat("Speed", Mathf.Abs(hMove));
 
-        if(hMove < 0){
-           gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        if (hMove < 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
-         if(hMove > 0){
-           gameObject.transform.localScale = new Vector3(1, 1, 1);
+        if (hMove > 0)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
 
-        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-        
+        Vector2 newPosition = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        transform.position = newPosition;
+
+        // Calculate the actual speed of the enemy
+        float actualSpeed = (newPosition - lastPosition).magnitude / Time.deltaTime;
+        lastPosition = newPosition;
+
+        // Set the "Speed" parameter based on the enemy's actual speed
+        animator.SetFloat("Speed", actualSpeed);
     }
-
-   
 
     void OnCollisionEnter2D(Collision2D other)
     {

@@ -18,6 +18,8 @@ public class PlayerCombat : MonoBehaviour
 
     public float downLightAttackRange = 0.21f;
 
+    public float heavyattackRange = 2f;
+
     public LayerMask enemyLayers;
 
     public InputActionAsset playerControls;
@@ -111,7 +113,7 @@ public class PlayerCombat : MonoBehaviour
     void HeavyFinish(GameObject sender)
     {
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyPoint.position, heavyattackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -185,7 +187,7 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawWireSphere(jabPoint.position, attackRange);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(heavyPoint.position, attackRange);
+        Gizmos.DrawWireSphere(heavyPoint.position, heavyattackRange);
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(upHeavyPoint.position, heavyUpAttackRange);
