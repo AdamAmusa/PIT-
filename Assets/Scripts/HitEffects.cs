@@ -22,7 +22,8 @@ public class NewBehaviourScript : MonoBehaviour
             knockbackUp(sender);
         }
         else
-        {//stop all coroutines
+        {
+            //stop all coroutines
             StopAllCoroutines();
             //invoke the onBegin event
             OnBegin?.Invoke();
@@ -37,6 +38,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     }
 
+ 
+
     void knockbackUp(GameObject sender)
     {
         //stop all coroutines
@@ -46,7 +49,6 @@ public class NewBehaviourScript : MonoBehaviour
         //get the direction from the sender to this object
         Vector2 direction = (transform.position - sender.transform.position).normalized;
         
-
         //add force to the rigidbody
         rb.AddForce(direction * lightStrength, ForceMode2D.Impulse);
         StartCoroutine(Reset());

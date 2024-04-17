@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,14 @@ public class Health : MonoBehaviour
 
     //function to be called when the object is hit
     public void onHit(GameObject sender, string move){
+        StartCoroutine(Indicator(Color.black));
         OnHitWithReference?.Invoke(sender, move); 
+    }
+
+
+    private IEnumerator Indicator(Color color){
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

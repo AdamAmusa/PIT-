@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Serializers;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
 
-    public GameObject player;
+    public Transform player;
     public Animator animator;
     private Rigidbody2D rb;
     private float distance;
     public float speed;
+
+    public EnemyData enemyData;
 
     private float hMove;
     private Vector2 lastPosition;
@@ -18,33 +21,38 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         lastPosition = transform.position;
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
-
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-
-        if (hMove < 0)
-        {
-            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+    {   
+        if(!player){
+            GetTarget();
         }
-        if (hMove > 0)
-        {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-
+        else
+        { // Move the enemy towards the player
         Vector2 newPosition = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         transform.position = newPosition;
 
         // Calculate the actual speed of the enemy
         float actualSpeed = (newPosition - lastPosition).magnitude / Time.deltaTime;
+        if (newPosition.x > lastPosition.x)
+        {
+            // Moving right
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (newPosition.x < lastPosition.x)
+        {
+            // Moving left
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
         lastPosition = newPosition;
-
-        // Set the "Speed" parameter based on the enemy's actual speed
-        animator.SetFloat("Speed", actualSpeed);
+        Debug.Log("Speed is " + actualSpeed);
+        animator.SetFloat("Speed", Mathf.Abs(actualSpeed));
+       // Debug.Log(player.transform.position);}
+       
+    }
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -53,5 +61,9 @@ public class Enemy : MonoBehaviour
         {
             Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
         }
+    }
+
+    void GetTarget(){
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 }

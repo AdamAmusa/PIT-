@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
    
     private Rigidbody2D rb;
     private float hMove;
+    private Vector2 lastPosition;
 
 
 
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {   
         rb = GetComponent<Rigidbody2D>();
+        lastPosition = transform.position;
     }
 
     // Update is called once per frame
