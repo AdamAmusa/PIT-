@@ -50,9 +50,5 @@ static async Task<(bool success, string returnMessage)>SendPostRequest(string ur
 static bool HasErrorMessage(string msg) => int.TryParse(msg, out var res);
 
 }
-public class Data{
-    public string username;
-    public int score;    
-}
 
 
