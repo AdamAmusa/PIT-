@@ -8,18 +8,28 @@ public static class MySQLManager
 {
     readonly static string SERVER_URL = "http://localhost:80/UnityGame";
 
-public static async Task<bool> SubmitUser(string username, string score)
+public static async Task<(bool success, string returnMessage)> SubmitUser(string username, string score)
 {
   
-    string REGISTER_USER_URL = $"{SERVER_URL}/addUsers.php";
-    return await SendPostRequest(REGISTER_USER_URL, new Dictionary<string, string>
+    string ADD_USER_URL = $"{SERVER_URL}/addUsers.php";
+    return await SendPostRequest(ADD_USER_URL, new Dictionary<string, string>
     {
         {"username", username},
         {"score", score}
     });
 }
 
-static async Task<bool>SendPostRequest(string url, Dictionary<string, string> data){
+public static async Task<(bool success, string returnMessage)>LeaderboardData()
+{
+  
+    string GET_DATA = $"{SERVER_URL}/viewTable.php";
+    return await SendPostRequest(GET_DATA, new Dictionary<string, string>
+    { 
+
+    });
+}
+
+static async Task<(bool success, string returnMessage)>SendPostRequest(string url, Dictionary<string, string> data){
     using(UnityWebRequest req = UnityWebRequest.Post(url, data)){
         req.SendWebRequest();
 
@@ -29,10 +39,10 @@ static async Task<bool>SendPostRequest(string url, Dictionary<string, string> da
         if(req.error != null 
         || !string.IsNullOrWhiteSpace(req.error) 
         || HasErrorMessage(req.downloadHandler.text))
-        return false;
+        return (false, req.downloadHandler.text);
             
         //On Success
-        return true;
+        return (true, req.downloadHandler.text);
     }
 
 }

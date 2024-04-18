@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeSpawner : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class DeSpawner : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(other.gameObject);
+            SceneManager.LoadScene(1);
         }
     }
 }

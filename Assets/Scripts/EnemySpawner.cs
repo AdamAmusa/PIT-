@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject swarmerPrefab;
 
+    private GameManager gameManager;
     [SerializeField] private float spawnRange = 5f;
     [SerializeField] private float spawnInterval = 3.5f;
     private int enemiesSpawned = 0;
@@ -21,9 +22,9 @@ public class EnemySpawner : MonoBehaviour
         currentEnemies = spawnQuantity;
 
         StartCoroutine(SpawnEnemy(spawnInterval, swarmerPrefab));
-        
 
     }
+
 
     void Update()
     {
@@ -62,7 +63,9 @@ public class EnemySpawner : MonoBehaviour
     void checkRoundFinished(){
         if(currentEnemies == 0)
         {
+            gameManager = GameObject.FindObjectOfType<GameManager>();
             score += 100;
+            gameManager.storeScores(score);
             Debug.Log("Round " + round + " Complete");
             round++;
             spawnQuantity += 2;
@@ -79,8 +82,11 @@ public class EnemySpawner : MonoBehaviour
 
     public void reduceEnemies()
     {
+
         score += 10;
         currentEnemies--;
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+        gameManager.storeScores(score);
     }
 
     public int getScore(){

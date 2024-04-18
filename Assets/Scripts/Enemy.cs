@@ -27,11 +27,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!player)
+        if (!player && GameObject.FindGameObjectWithTag("Player") != null)
         {
-            GetTarget();
+             GetTarget();
         }
-        else
+        else if(GameObject.FindGameObjectWithTag("Player") != null)
         { // Move the enemy towards the player
             Vector2 newPosition = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
             transform.position = newPosition;
@@ -86,6 +86,8 @@ public class Enemy : MonoBehaviour
 
     void GetTarget()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        
     }
 }
