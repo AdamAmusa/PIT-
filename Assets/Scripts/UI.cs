@@ -14,9 +14,13 @@ public class UI : MonoBehaviour
         enemies = GameObject.FindObjectOfType<EnemySpawner>();
         scoreText.text = "Score: 0";
         round.text = "Round: 1";
+ 
+    }
+
+    void Update()
+    {
         
-        enemiesLeft.text = "Total Enemies:" + enemies.GetNumberOfEnemies();
-        Debug.Log(enemies.GetNumberOfEnemies());
+        enemiesLeft.text = "Total Enemies: " + enemies.getcurrentEnemies() + "/" + enemies.GetTotalEnemies();
     }
 
   

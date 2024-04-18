@@ -9,17 +9,19 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float spawnRange = 5f;
     [SerializeField]private float spawnInterval = 3.5f;
     private int enemiesSpawned = 0;
-
-    public int spawnQuantity = 5;
-
+    
+    private int spawnQuantity = 5;
+    private int currentEnemies;
     // Start is called before the first frame update
     void Start()
     {
+        currentEnemies = spawnQuantity;
         StartCoroutine(SpawnEnemy(spawnInterval, swarmerPrefab));
     }
 
   private IEnumerator SpawnEnemy(float interval, GameObject enemy)
     {
+
         if (enemiesSpawned < spawnQuantity)
         {
             Debug.Log("Spawning Enemy");
@@ -30,10 +32,18 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public int GetNumberOfEnemies(){
+    public int GetTotalEnemies(){
         return spawnQuantity;
     }
-    
+
+    public void reduceEnemies(){
+         currentEnemies--;
+    }
+
+    public int getcurrentEnemies(){
+        return currentEnemies;
+        }
+
       void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
