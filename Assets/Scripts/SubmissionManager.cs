@@ -12,7 +12,7 @@ public class SubmissionManager : MonoBehaviour
 
     public async void OnSubmitPressed()
     {
-     if(await MySQLManager.SubmitUser(username.text, "200")){
+     if(await MySQLManager.SubmitUser(username.text, gameData.getScore().ToString())){
         print("Successfully Registered");
      }
      else{
