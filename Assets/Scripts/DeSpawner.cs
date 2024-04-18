@@ -15,5 +15,10 @@ public class DeSpawner : MonoBehaviour
             enemyNum.reduceEnemies();
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

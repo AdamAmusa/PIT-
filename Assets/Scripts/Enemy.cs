@@ -56,27 +56,33 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             
-            //Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
 
             // Get the player's Rigidbody2D
             Rigidbody2D playerRb = other.gameObject.GetComponent<Rigidbody2D>();
 
             // Calculate the knockback direction
-           Vector2 knockbackDirection = new Vector2(Mathf.Sign(playerRb.transform.position.x - transform.position.x), 0);
-            //knockbackDirection.Normalize();
-            
+            Vector2 knockbackDirection = new Vector2(Mathf.Sign(playerRb.transform.position.x - transform.position.x), 0);
 
             // Apply the knockback force
-            float knockbackForce = 50f;
-            other.rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
-            Debug.Log("Player collided with enemy!");
+            float knockbackForce = 1000;
+            playerRb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Force);
+            Debug.Log("Player collided with enemy!" + knockbackDirection);
+           Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>(), false);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.CompareTag("Enemy")){
+            Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
+        }
+    }
+
 
     void GetTarget()
     {
