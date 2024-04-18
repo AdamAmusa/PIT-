@@ -12,8 +12,8 @@ public class UI : MonoBehaviour
     void Start()
     {
         enemies = GameObject.FindObjectOfType<EnemySpawner>();
-        scoreText.text = "Score: 0";
-        round.text = "Round: 1";
+        
+        
  
     }
 
@@ -21,6 +21,8 @@ public class UI : MonoBehaviour
     {
         
         enemiesLeft.text = "Total Enemies: " + enemies.getcurrentEnemies() + "/" + enemies.GetTotalEnemies();
+        round.text = "Round: " + enemies.getRound();
+        scoreText.text = "Score: " + enemies.getScore();
     }
 
   
