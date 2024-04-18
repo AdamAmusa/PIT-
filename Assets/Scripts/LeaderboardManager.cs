@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,13 +51,18 @@ public class LeaderboardManager : MonoBehaviour
         if (success)
         {
             print("Successfully Loaded" + data);
-            string[] rows = data.Split('\n');
-
-            for (int i = 0; i < rows.Length; i++)
+            print("Raw Data: " + data);
+            string[] rows = data.Split(new[] { "<br>" }, StringSplitOptions.RemoveEmptyEntries);
+            print(rows.Length);
+            for (int i = 0; i <= rows.Length-1; i++)
             {
+                print("index + " + i);
                 string[] cols = rows[i].Split('#');
+                print("Column Length: " + cols.Length + " " + "Row length "+  rows.Length);
                 names[i].text = cols[0];
                 scores[i].text = cols[1];
+                Debug.Log(cols[0] + " " + cols[1]);
+                print("index + " + i);
             }
         }
         else

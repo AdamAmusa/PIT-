@@ -25,8 +25,8 @@ public static async Task<(bool success, string returnMessage)>LeaderboardData()
     string GET_DATA = $"{SERVER_URL}/viewTable.php";
     return await SendPostRequest(GET_DATA, new Dictionary<string, string>
     { 
-
-    });
+       
+    } );
 }
 
 static async Task<(bool success, string returnMessage)>SendPostRequest(string url, Dictionary<string, string> data){
