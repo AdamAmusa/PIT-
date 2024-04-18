@@ -10,6 +10,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]private float spawnInterval = 3.5f;
     private int enemiesSpawned = 0;
 
+    public int spawnQuantity = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
 
   private IEnumerator SpawnEnemy(float interval, GameObject enemy)
     {
-        if (enemiesSpawned < 5)
+        if (enemiesSpawned < spawnQuantity)
         {
             Debug.Log("Spawning Enemy");
             yield return new WaitForSeconds(interval);
@@ -28,6 +30,9 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    public int GetNumberOfEnemies(){
+        return spawnQuantity;
+    }
     
       void OnDrawGizmos()
     {

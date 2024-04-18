@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
         lastPosition = newPosition;
-        Debug.Log("Speed is " + actualSpeed);
+        
         animator.SetFloat("Speed", Mathf.Abs(actualSpeed));
        // Debug.Log(player.transform.position);}
        
