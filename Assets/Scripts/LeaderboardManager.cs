@@ -12,10 +12,10 @@ public class LeaderboardManager : MonoBehaviour
     [Header("Submit Score")]
     private GameManager gameData;
     [SerializeField] TMP_InputField username;
+    [SerializeField] private TextMeshProUGUI scoreIndicator;
     [SerializeField] private Button submitButton; // Reference to the button
 
 
-    [SerializeField] private GameObject rowUi;
     [SerializeField] private Transform leaderboardParent;
 
     [SerializeField] private List<TextMeshProUGUI> names;
@@ -27,7 +27,12 @@ public class LeaderboardManager : MonoBehaviour
 
     void Start()
     {
+
+        gameData = GameObject.FindObjectOfType<GameManager>();
         loadLeaderboard();
+        
+        scoreIndicator.text = "Your Score: " + gameData.getScores().ToString();
+     
     }
 
     public async void OnSubmitPressed()
