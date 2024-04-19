@@ -20,8 +20,12 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
+    public void goLeaderboard(){
+        SceneManager.LoadScene(1);
+    }
+
     public void goMainMenu()
     {
         SceneManager.LoadScene(2);
-    }   
+    }
 }
