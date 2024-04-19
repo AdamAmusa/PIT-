@@ -105,7 +105,6 @@
     <None Include="Assets\TileSheets\Tilesheet (Characters).txt" />
     <None Include="Assets\Construct 3\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\BigManJD\readme.txt" />
     <None Include="Assets\Spritesheet\uipack_rpg_sheet.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
