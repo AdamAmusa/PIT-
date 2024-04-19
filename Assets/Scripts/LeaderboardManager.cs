@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LeaderboardManager : MonoBehaviour
 {
     [Header("Submit Score")]
     private GameManager gameData;
     [SerializeField] TMP_InputField username;
+    [SerializeField] private Button submitButton; // Reference to the button
 
 
     [SerializeField] private GameObject rowUi;
@@ -17,6 +20,8 @@ public class LeaderboardManager : MonoBehaviour
 
     [SerializeField] private List<TextMeshProUGUI> names;
     [SerializeField] private List<TextMeshProUGUI> scores;
+
+    [SerializeField] private List<TextMeshProUGUI> rank;
 
 
 
@@ -35,13 +40,14 @@ public class LeaderboardManager : MonoBehaviour
         {
             print("Successfully Registered" + data);
             loadLeaderboard();
+            submitButton.interactable = false;
         }
 
         else
         {
             print("Failed to Register");
         }
-
+        username.text = "";
     }
 
     public async void loadLeaderboard()
@@ -50,19 +56,17 @@ public class LeaderboardManager : MonoBehaviour
 
         if (success)
         {
-            print("Successfully Loaded" + data);
-            print("Raw Data: " + data);
+      
             string[] rows = data.Split(new[] { "<br>" }, StringSplitOptions.RemoveEmptyEntries);
-            print(rows.Length);
+
             for (int i = 0; i <= rows.Length-1; i++)
             {
-                print("index + " + i);
                 string[] cols = rows[i].Split('#');
-                print("Column Length: " + cols.Length + " " + "Row length "+  rows.Length);
                 names[i].text = cols[0];
                 scores[i].text = cols[1];
+                rank[i].text = (i + 1).ToString();
                 Debug.Log(cols[0] + " " + cols[1]);
-                print("index + " + i);
+                
             }
         }
         else
@@ -71,18 +75,7 @@ public class LeaderboardManager : MonoBehaviour
         }
     }
 
-    void generateRows(string data)
-    {
-        string[] rows = data.Split('\n');
-        for (int i = 0; i < rows.Length; i++)
-        {
-            string[] cols = rows[i].Split('#');
-            var row = Instantiate(rowUi, transform).GetComponent<RowUi>();
 
-            row.username.text = cols[0];
-            row.score.text = cols[1];
-        }
-    }
 
 
 }
