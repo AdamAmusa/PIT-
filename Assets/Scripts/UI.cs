@@ -19,7 +19,7 @@ public class UI : MonoBehaviour
 
     void Update()
     {
-        
+        //Update the UI
         enemiesLeft.text = "Total Enemies: " + enemies.getcurrentEnemies() + "/" + enemies.GetTotalEnemies();
         round.text = "Round: " + enemies.getRound();
         scoreText.text = "Score: " + enemies.getScore();

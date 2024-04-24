@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    
+    //this function will quit the game
     public void QuitGame()
     {
         Debug.Log("QUIT!");
@@ -20,10 +22,12 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
+    //this function will load the leaderboard
     public void goLeaderboard(){
         SceneManager.LoadScene(1);
     }
 
+    //this function will load the main menu
     public void goMainMenu()
     {
         SceneManager.LoadScene(2);

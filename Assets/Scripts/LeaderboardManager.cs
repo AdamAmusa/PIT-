@@ -35,8 +35,10 @@ public class LeaderboardManager : MonoBehaviour
      
     }
 
+    //this function will submit the user data to the database
     public async void OnSubmitPressed()
     {
+       
         gameData = GameObject.FindObjectOfType<GameManager>();
 
         (bool success, string data) = await MySQLManager.SubmitUser(username.text, gameData.getScores().ToString());
@@ -55,10 +57,13 @@ public class LeaderboardManager : MonoBehaviour
         username.text = "";
     }
 
+    //this function will load the leaderboard
     public async void loadLeaderboard()
     {
+        //get the data from the database
         (bool success, string data) = await MySQLManager.LeaderboardData();
 
+        //if the data is successfully loaded
         if (success)
         {
       
