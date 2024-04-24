@@ -61,30 +61,35 @@ public class PlayerCombat : MonoBehaviour
 
         if (combatControls.upLight.triggered)
         {
+
             animator.SetTrigger("Light-Up");
             Debug.Log("Light-Up");
         }
 
         if (Input.GetKey("n"))
         {
+
             animator.SetTrigger("HeavyAttack");
             Debug.Log("Heavy");
         }
 
         if (Input.GetKey("n") && Input.GetKey("w"))
         {
+
             animator.SetTrigger("Heavy-Up");
             Debug.Log("Up Heavy");
         }
 
         if (Input.GetKey("n") && Input.GetKey("s"))
         {
+
             animator.SetTrigger("Heavy-Down");
             Debug.Log("Down Heavy");
         }
 
         if (combatControls.DownLight.triggered)
         {
+
             animator.SetTrigger("Light-Down");
             Debug.Log("Down Light");
         }
@@ -103,7 +108,7 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("We hit " + enemy.name);
             Health health = enemy.GetComponent<Health>();
             health.onHit(this.gameObject, "LightAttack");
-            
+
         }
 
         animator.ResetTrigger("LightAttack");

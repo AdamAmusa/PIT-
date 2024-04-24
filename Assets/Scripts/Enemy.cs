@@ -16,12 +16,13 @@ public class Enemy : MonoBehaviour
 
     private float hMove;
     private Vector2 lastPosition;
+    AudioManager audiomanagerObject;
 
     // Start is called before the first frame update
     void Start()
     {
         lastPosition = transform.position;
-
+        audiomanagerObject = FindAnyObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -60,7 +61,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
+            audiomanagerObject.playPunch();
             Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
 
             // Get the player's Rigidbody2D
