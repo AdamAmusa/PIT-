@@ -188,8 +188,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -254,8 +254,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 838.4, y: 416.8}
-  m_SizeDelta: {x: 243.21, y: 76.2}
+  m_AnchoredPosition: {x: 325, y: 152.4}
+  m_SizeDelta: {x: 243.21, y: 57.7425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &444928338
 GameObject:
@@ -1987,8 +1987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784.14, y: 416.98}
-  m_SizeDelta: {x: 243.21, y: 76.55}
+  m_AnchoredPosition: {x: -326, y: 152.40378}
+  m_SizeDelta: {x: 243.21, y: 57.7425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960494875
 MonoBehaviour:
@@ -2037,8 +2037,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2232,7 +2232,7 @@ Canvas:
   m_GameObject: {fileID: 1119347457}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1590744531465465023}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2392,8 +2392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784.14, y: 340.6}
-  m_SizeDelta: {x: 243.21, y: 76.2}
+  m_AnchoredPosition: {x: -326, y: 70.97945}
+  m_SizeDelta: {x: 243.21, y: 67.8411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461383896
 MonoBehaviour:
@@ -2442,8 +2442,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
